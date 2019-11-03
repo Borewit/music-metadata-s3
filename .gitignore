@@ -1,0 +1,7 @@
+node_modules/
+lib/**/*.js
+lib/**/*.js.map
+.idea/
+*.iml
+coverage/
+.nyc_output/

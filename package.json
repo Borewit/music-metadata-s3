@@ -1,0 +1,48 @@
+{
+  "name": "music-metadata-s3-client",
+  "version": "0.1.0",
+  "description": "Extension for music-metadata to read metadata from audio files on Amazon S3 storage",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.d.ts"
+  ],
+  "scripts": {
+    "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts coverage",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-lib": "tsc -p lib/tsconfig.json",
+    "compile": "npm run compile-lib",
+    "build": "npm run clean && yarn run compile",
+    "lint": "tslint 'lib/**/*.ts' --exclude 'lib/**/*.d.ts' 'test/**/*.ts' --exclude 'test/**/*.d.ts'"
+  },
+  "keywords": [
+    "S3",
+    "audio",
+    "metadata",
+    "storage",
+    "chunk",
+    "range",
+    "tags",
+    "media"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Borewit/music-metadata-s3-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Borewit/music-metadata-s3-client/issues"
+  },
+  "dependencies": {
+    "music-metadata": "^4.8.4",
+    "streaming-http-token-reader": "^0.3.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.528.0",
+    "del-cli": "^3.0.0",
+    "tslint": "^6.0.0-beta0",
+    "typescript": "^3.6.4"
+  }
+}
