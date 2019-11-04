@@ -30,10 +30,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Borewit/music-metadata-s3-client.git"
+    "url": "git+https://github.com/Borewit/music-metadata-s3.git"
   },
   "bugs": {
-    "url": "https://github.com/Borewit/music-metadata-s3-client/issues"
+    "url": "https://github.com/Borewit/music-metadata-s3/issues"
   },
   "dependencies": {
     "music-metadata": "^4.8.4",
