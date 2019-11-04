@@ -5,17 +5,14 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Borewit/music-metadata-s3.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Borewit/music-metadata-s3/context:javascript)
 
 # @music-metadata/s3
+Extension for [music-metadata](https://github.com/Borewit/music-metadata) to retrieve metadata from files stored on [Amazon S3 cloud storage](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html).
 
 ## Installation
-
 ```shell script
 npm install @music-metadata/s3
 ```
 
-Extension for [music-metadata](https://github.com/Borewit/music-metadata) to retrieve metadata from files stored on [Amazon S3 cloud storage](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html).
-
 ## Reading metadata from Amazon S3 
-
 Example:
 ```js
 const { MusicMetadataS3Client } = require('music-metadata-s3-client');
