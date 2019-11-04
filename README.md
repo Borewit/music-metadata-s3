@@ -8,6 +8,9 @@
 # @music-metadata/s3
 Extension for [music-metadata](https://github.com/Borewit/music-metadata) to retrieve metadata from files stored on [Amazon Web Services (AWS) S3 cloud storage](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html).
 
+The magic of this module is, it is able to extract the metadata from your audio files, without downloading and parsing the entire file.
+Using [streaming-http-token-reader](https://github.com/Borewit/streaming-http-token-reader) under the hood, it partial downloads the required chunks.
+
 ## Installation
 ```shell script
 npm install @music-metadata/s3
