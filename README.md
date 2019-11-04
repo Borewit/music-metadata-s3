@@ -1,6 +1,8 @@
 [![NPM version](https://img.shields.io/npm/v/@music-metadata/s3.svg)](https://npmjs.org/package/@music-metadata/s3)
 [![npm downloads](http://img.shields.io/npm/dm/@music-metadata/s3.svg)](https://npmcharts.com/compare/@music-metadata/s3?start=300)
-[![Known Vulnerabilities](https://snyk.io/test/github/Borewit/@music-metadata/s3/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/@music-metadata/s3?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/Borewit/music-metadata-s3/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/music-metadata-s3?targetFile=package.json)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Borewit/music-metadata-s3.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Borewit/music-metadata-s3/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Borewit/music-metadata-s3.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Borewit/music-metadata-s3/context:javascript)
 
 # @music-metadata/s3
 
