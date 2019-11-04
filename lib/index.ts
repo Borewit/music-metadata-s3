@@ -20,7 +20,7 @@ interface IS3Options extends mm.IOptions {
  */
 class S3Request implements IHttpClient {
 
-  constructor(private s3client: MusicMetadataS3Client, private objRequest: S3.Types.GetObjectRequest) {
+  constructor(private s3client: MMS3Client, private objRequest: S3.Types.GetObjectRequest) {
   }
 
   async getResponse(method, range: number[]): Promise<IHttpResponse> {
@@ -38,7 +38,7 @@ class S3Request implements IHttpClient {
   }
 }
 
-export class MusicMetadataS3Client {
+export class MMS3Client {
 
   constructor(private s3: S3) {
   }
