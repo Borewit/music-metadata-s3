@@ -17,10 +17,10 @@
     "lint": "tslint 'lib/**/*.ts' --exclude 'lib/**/*.d.ts' 'test/**/*.ts' --exclude 'test/**/*.d.ts'"
   },
   "keywords": [
-    "S3",
     "audio",
     "metadata",
-    "storage",
+    "S3",
+    "AWS",
     "chunk",
     "range",
     "tags",
