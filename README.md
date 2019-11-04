@@ -1,11 +1,21 @@
-# music-metadata-s3-client
+[![NPM version](https://img.shields.io/npm/v/@music-metadata/s3.svg)](https://npmjs.org/package/@music-metadata/s3)
+[![npm downloads](http://img.shields.io/npm/dm/@music-metadata/s3.svg)](https://npmcharts.com/compare/@music-metadata/s3?start=300)
+[![Known Vulnerabilities](https://snyk.io/test/github/Borewit/@music-metadata/s3/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/@music-metadata/s3?targetFile=package.json)
+
+# @music-metadata/s3
+
+## Installation
+
+```shell script
+npm install @music-metadata/s3
+```
 
 Extension for [music-metadata](https://github.com/Borewit/music-metadata) to retrieve metadata from files stored on [Amazon S3 cloud storage](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html).
 
 ## Reading metadata from Amazon S3 
 
 Example:
-````js
+```js
 const { MusicMetadataS3Client } = require('music-metadata-s3-client');
 const S3 = require('aws-sdk/clients/s3');
 
