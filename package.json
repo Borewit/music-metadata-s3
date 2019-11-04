@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts coverage",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "compile-lib": "tsc -p lib/tsconfig.json",
     "compile": "npm run compile-lib",
     "build": "npm run clean && yarn run compile",

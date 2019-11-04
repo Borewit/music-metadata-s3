@@ -4,8 +4,8 @@
 
 import * as S3 from 'aws-sdk/clients/s3';
 import * as mm from 'music-metadata';
-import {StreamingHttpTokenReader, IHttpClient, IHttpResponse} from 'streaming-http-token-reader';
-import {parseContentRange} from 'streaming-http-token-reader/lib/http-client';
+import { StreamingHttpTokenReader, IHttpClient, IHttpResponse } from 'streaming-http-token-reader';
+import { parseContentRange } from 'streaming-http-token-reader/lib/http-client';
 import { AWSError, Request } from 'aws-sdk';
 
 interface IS3Options extends mm.IOptions {
@@ -30,10 +30,10 @@ class S3Request implements IHttpClient {
         contentLength: data.ContentLength,
         contentType: data.ContentType,
         contentRange: parseContentRange(data.ContentRange),
-        arrayBuffer: async() => {
-          return data.Body as Buffer
+        arrayBuffer: async () => {
+          return data.Body as Buffer;
         }
-      }
+      };
     });
   }
 }
@@ -49,7 +49,7 @@ export class MusicMetadataS3Client {
    * @param range
    */
   getRangedRequest(objRequest: S3.Types.GetObjectRequest, range: number[]): Request<S3.Types.GetObjectOutput, AWSError> {
-    const rangedRequest = Object.assign({}, objRequest); // Copy request
+    const rangedRequest = {...objRequest}; // Copy request
     rangedRequest.Range = `bytes=${range[0]}-${range[1]}`;
     return this.s3.getObject(rangedRequest);
   }
@@ -70,7 +70,7 @@ export class MusicMetadataS3Client {
       return mm.parseStream(stream, info.ContentType, options);
     } else {
       const s3Request = new S3Request(this, objRequest);
-      const streamingHttpTokenReader = new StreamingHttpTokenReader(s3Request,  {
+      const streamingHttpTokenReader = new StreamingHttpTokenReader(s3Request, {
         avoidHeadRequests: true
       });
       await streamingHttpTokenReader.init();
