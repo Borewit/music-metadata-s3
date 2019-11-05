@@ -16,7 +16,7 @@ Using [streaming-http-token-reader](https://github.com/Borewit/streaming-http-to
 npm install @music-metadata/s3
 ```
 
-## Reading metadata from Amazon S3 
+## Reading audio metadata from Amazon S3 
 
 Read metadata from 'My audio files/01 - My audio track.flac' stored in the S3 cloud:
 ```js
