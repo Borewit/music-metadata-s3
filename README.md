@@ -42,7 +42,7 @@ const S3 = require('aws-sdk/clients/s3');
 })();
 ```
 
-With conventional streaming using the `disableChunked` flag:
+Using conventional streaming using the `disableChunked` flag:
 ```js
 const { MMS3Client } = require('music-metadata-s3-client');
 const S3 = require('aws-sdk/clients/s3');
