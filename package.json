@@ -24,7 +24,12 @@
     "chunk",
     "range",
     "tags",
-    "media"
+    "media",
+    "amazon",
+    "music",
+    "cloud",
+    "wav",
+    "flac"
   ],
   "author": "",
   "license": "MIT",
