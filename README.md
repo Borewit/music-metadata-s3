@@ -17,7 +17,32 @@ npm install @music-metadata/s3
 ```
 
 ## Reading metadata from Amazon S3 
-Example:
+
+Read metadata from 'My audio files/01 - My audio track.flac' stored in the S3 cloud:
+```js
+const { MMS3Client } = require('music-metadata-s3-client');
+const S3 = require('aws-sdk/clients/s3');
+
+(async () => {
+
+  const s3 = new S3();
+  const mmS3client = new MMS3Client(s3); // Pass S3 client to music-metadata-S3-client
+
+  console.log('Parsing...');
+  try {
+    const data = await mmS3client.parseS3Object({
+        Bucket: 'your-bucket',
+        Key: 'My audio files/01 - My audio track.flac'
+      }
+    );
+    console.log('metadata:', data);
+  } catch (e) {
+    console.error(`Oops: ${e.message}`);
+  }
+})();
+```
+
+With conventional streaming using the `disableChunked` flag:
 ```js
 const { MMS3Client } = require('music-metadata-s3-client');
 const S3 = require('aws-sdk/clients/s3');
@@ -33,7 +58,7 @@ const S3 = require('aws-sdk/clients/s3');
         Bucket: 'your-bucket',
         Key: 'My audio files/01 - My audio track.flac'
       }, {
-        disableChunked: false // If set to true, fall back to conventional stream
+        disableChunked: true // Disable chunked transfer
       }
     );
     console.log('metadata:', data);
@@ -42,3 +67,11 @@ const S3 = require('aws-sdk/clients/s3');
   }
 })();
 ```
+
+## Options
+
+| option           |type       |description                                                    |
+|------------------|-----------|---------------------------------------------------------------|
+| `disableChunked` | `boolean` | set to `true` to switch to conventional sequential streaming. |
+
+Other options are inherited from [music-metadata](https://github.com/Borewit/music-metadata#options)
