@@ -3,12 +3,18 @@
 //
 
 import * as S3 from 'aws-sdk/clients/s3';
-import * as mm from 'music-metadata';
+import { parseFromTokenizer, parseStream } from 'music-metadata/lib/core';
+import * as Type from 'music-metadata/lib/type';
 import { StreamingHttpTokenReader, IHttpClient, IHttpResponse } from 'streaming-http-token-reader';
 import { parseContentRange } from 'streaming-http-token-reader/lib/http-client';
 import { AWSError, Request } from 'aws-sdk';
 
-interface IS3Options extends mm.IOptions {
+export type IAudioMetadata = Type.IAudioMetadata;
+export type IOptions = Type.IOptions;
+export type ITag = Type.ITag;
+export type INativeTagDict = Type.INativeTagDict;
+
+interface IS3Options extends IOptions {
   /**
    * Disable chunked transfer, use conventional stream
    */
@@ -59,7 +65,7 @@ export class MMS3Client {
    * @param objRequest S3 object request
    * @param options music-metadata options
    */
-  public async parseS3Object(objRequest: S3.Types.GetObjectRequest, options?: IS3Options): Promise<mm.IAudioMetadata> {
+  public async parseS3Object(objRequest: S3.Types.GetObjectRequest, options?: IS3Options): Promise<IAudioMetadata> {
     if (options && options.disableChunked) {
 
       const info = await this.getRangedRequest(objRequest, [0, 0]).promise();
@@ -67,14 +73,14 @@ export class MMS3Client {
       const stream = this.s3
         .getObject(objRequest)
         .createReadStream();
-      return mm.parseStream(stream, info.ContentType, options);
+      return parseStream(stream, info.ContentType, options);
     } else {
       const s3Request = new S3Request(this, objRequest);
       const streamingHttpTokenReader = new StreamingHttpTokenReader(s3Request, {
         avoidHeadRequests: true
       });
       await streamingHttpTokenReader.init();
-      return mm.parseFromTokenizer(streamingHttpTokenReader, streamingHttpTokenReader.contentType, options);
+      return parseFromTokenizer(streamingHttpTokenReader, streamingHttpTokenReader.contentType, options);
     }
   }
 
