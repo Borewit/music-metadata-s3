@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Borewit/music-metadata-s3.svg?branch=master)](https://travis-ci.org/Borewit/music-metadata-s3)
 [![NPM version](https://img.shields.io/npm/v/@music-metadata/s3.svg)](https://npmjs.org/package/@music-metadata/s3)
-[![npm downloads](https://img.shields.io/npm/dm/@music-metadata/s3.svg)](https://npmcharts.com/compare/@music-metadata/s3?start=300)
+[![npm downloads](https://img.shields.io/npm/dm/@music-metadata/s3.svg)](https://npmcharts.com/compare/streaming-http-token-reader,@music-metadata/s3?start=300)
 [![Known Vulnerabilities](https://snyk.io/test/github/Borewit/music-metadata-s3/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Borewit/music-metadata-s3?targetFile=package.json)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Borewit/music-metadata-s3.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Borewit/music-metadata-s3/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Borewit/music-metadata-s3.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Borewit/music-metadata-s3/context:javascript)
@@ -25,7 +25,7 @@ const S3 = require('aws-sdk/clients/s3');
 (async () => {
 
   const s3 = new S3();
-  const mmS3client = new MMS3Client(s3); // Pass s3 client to music-metadata-S3
+  const mmS3client = new MMS3Client(s3); // Pass S3 client to music-metadata-S3-client
 
   console.log('Parsing...');
   try {
