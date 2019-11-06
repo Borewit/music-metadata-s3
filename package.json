@@ -47,7 +47,7 @@
   "devDependencies": {
     "aws-sdk": "^2.528.0",
     "del-cli": "^3.0.0",
-    "tslint": "^6.0.0-beta0",
+    "tslint": "^5.20.1",
     "typescript": "^3.6.4"
   }
 }
