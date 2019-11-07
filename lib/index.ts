@@ -29,7 +29,7 @@ class S3Request implements IHttpClient {
   constructor(private s3client: MMS3Client, private objRequest: S3.Types.GetObjectRequest) {
   }
 
-  async getResponse(method, range: number[]): Promise<IHttpResponse> {
+  public async getResponse(method, range: number[]): Promise<IHttpResponse> {
 
     return this.s3client.getRangedRequest(this.objRequest, range).promise().then(data => {
       return {
@@ -54,7 +54,7 @@ export class MMS3Client {
    * @param objRequest
    * @param range
    */
-  getRangedRequest(objRequest: S3.Types.GetObjectRequest, range: number[]): Request<S3.Types.GetObjectOutput, AWSError> {
+  public getRangedRequest(objRequest: S3.Types.GetObjectRequest, range: number[]): Request<S3.Types.GetObjectOutput, AWSError> {
     const rangedRequest = {...objRequest}; // Copy request
     rangedRequest.Range = `bytes=${range[0]}-${range[1]}`;
     return this.s3.getObject(rangedRequest);
@@ -83,6 +83,4 @@ export class MMS3Client {
       return parseFromTokenizer(streamingHttpTokenReader, streamingHttpTokenReader.contentType, options);
     }
   }
-
 }
-
