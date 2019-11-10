@@ -20,7 +20,7 @@ npm install @music-metadata/s3
 
 Read metadata from 'My audio files/01 - My audio track.flac' stored in the S3 cloud:
 ```js
-const { MMS3Client } = require('music-metadata-s3-client');
+const { MMS3Client } = require('@music-metadata/s3');
 const S3 = require('aws-sdk/clients/s3');
 
 (async () => {
@@ -44,7 +44,7 @@ const S3 = require('aws-sdk/clients/s3');
 
 Using conventional streaming using the `disableChunked` flag:
 ```js
-const { MMS3Client } = require('music-metadata-s3-client');
+const { MMS3Client } = require('@music-metadata/s3');
 const S3 = require('aws-sdk/clients/s3');
 
 (async () => {
