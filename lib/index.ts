@@ -1,7 +1,3 @@
-//
-// Example chunked streaming audio track from S3 buckets into music-metadata parser
-//
-
 import * as S3 from 'aws-sdk/clients/s3';
 import { parseFromTokenizer, parseStream } from 'music-metadata/lib/core';
 import * as Type from 'music-metadata/lib/type';

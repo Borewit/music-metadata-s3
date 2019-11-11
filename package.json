@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts coverage",
-    "test": "npm run lint",
+    "mocha": "mocha",
+    "test": "npm run lint && npm run mocha",
     "compile-lib": "tsc -p lib/tsconfig.json",
     "compile": "npm run compile-lib",
     "build": "npm run clean && yarn run compile",
@@ -46,7 +47,9 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.528.0",
+    "chai": "^4.2.0",
     "del-cli": "^3.0.0",
+    "mocha": "^6.2.2",
     "tslint": "^5.20.1",
     "typescript": "^3.6.4"
   }
