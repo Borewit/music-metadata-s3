@@ -16,13 +16,13 @@ export type INativeTagDict = Type.INativeTagDict;
 
 interface IS3Options extends IOptions {
   /**
-   * Disable chunked transfer, use conventional stream
+   * Flag to disable chunked transfer, use conventional HTTPS stream instead
    */
-  disableChunked: boolean;
+  disableChunked?: boolean;
 }
 
 /**
- * Use S3-client to execute actual HTTP-requests
+ * Use S3-client to execute actual HTTP-requests.
  */
 class S3Request implements IHttpClient {
 
