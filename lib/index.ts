@@ -1,14 +1,11 @@
 import * as S3 from 'aws-sdk/clients/s3';
 import { parseFromTokenizer, parseStream } from 'music-metadata/lib/core';
-import * as Type from 'music-metadata/lib/type';
 import { StreamingHttpTokenReader, IHttpClient, IHttpResponse } from 'streaming-http-token-reader';
 import { parseContentRange } from 'streaming-http-token-reader/lib/http-client';
 import { AWSError, Request } from 'aws-sdk';
+import { IOptions, IAudioMetadata } from 'music-metadata/lib/type';
 
-export type IAudioMetadata = Type.IAudioMetadata;
-export type IOptions = Type.IOptions;
-export type ITag = Type.ITag;
-export type INativeTagDict = Type.INativeTagDict;
+export { IPicture, IAudioMetadata, IOptions, ITag, INativeTagDict } from 'music-metadata/lib/type';
 
 interface IS3Options extends IOptions {
   /**
