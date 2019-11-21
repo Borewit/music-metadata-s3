@@ -19,3 +19,9 @@ update_configs:
           dependency_name: "aws-sdk"
       - match:
           dependency_name: "music-metadata"
+      - match:
+          dependency_name: "tslint"
+      - match:
+          dependency_name: "coveralls"
+      - match:
+          dependency_name: "nyc"
