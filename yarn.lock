@@ -39,6 +39,15 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
+"@tokenizer/range@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@tokenizer/range/-/range-0.1.0.tgz#3be97516213694a4995c08dee869c32ff3555f02"
+  integrity sha512-wIojK1GDoD4lhuaDganB5JiOtNOWzRJnVgwKSdUQmx+UYiQpLWR02JpOoJcy9P7/rT78Pb86BkfmyTLLXc/XOg==
+  dependencies:
+    debug "^4.1.1"
+    mocha "^6.2.2"
+    strtok3 "^3.0.4"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -874,11 +883,6 @@ node-environment-flags@1.0.5:
     object.getownpropertydescriptors "^2.0.3"
     semver "^5.7.0"
 
-node-fetch@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"
@@ -1148,15 +1152,6 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
-
-streaming-http-token-reader@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/streaming-http-token-reader/-/streaming-http-token-reader-0.3.1.tgz#fab384060fb214d7ffa70f00a4c669413695370f"
-  integrity sha512-8HLGXNvGvGWgwACaHXbj5DSPCItXn9rbXkzz6q3uDYTjjx1lqhCGKttHUC8iqDFPY7U2FcpXh3A4WKr6EiXntg==
-  dependencies:
-    debug "^4.1.1"
-    node-fetch "^2.6.0"
-    strtok3 "^3.0.4"
 
 "string-width@^1.0.2 || 2":
   version "2.1.1"

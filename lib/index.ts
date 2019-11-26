@@ -1,7 +1,6 @@
 import * as S3 from 'aws-sdk/clients/s3';
 import { parseFromTokenizer, parseStream } from 'music-metadata/lib/core';
-import { StreamingHttpTokenReader, IHttpClient, IHttpResponse } from 'streaming-http-token-reader';
-import { parseContentRange } from 'streaming-http-token-reader/lib/http-client';
+import { RangeRequestTokenizer, IRangeRequestClient, IRangeRequestResponse, parseContentRange } from '@tokenizer/range';
 import { AWSError, Request } from 'aws-sdk';
 import { IOptions, IAudioMetadata } from 'music-metadata/lib/type';
 
@@ -17,12 +16,12 @@ interface IS3Options extends IOptions {
 /**
  * Use S3-client to execute actual HTTP-requests.
  */
-class S3Request implements IHttpClient {
+class S3Request implements IRangeRequestClient {
 
   constructor(private s3client: MMS3Client, private objRequest: S3.Types.GetObjectRequest) {
   }
 
-  public async getResponse(method, range: number[]): Promise<IHttpResponse> {
+  public async getResponse(method, range: number[]): Promise<IRangeRequestResponse> {
 
     return this.s3client.getRangedRequest(this.objRequest, range).promise().then(data => {
       return {
@@ -69,11 +68,11 @@ export class MMS3Client {
       return parseStream(stream, info.ContentType, options);
     } else {
       const s3Request = new S3Request(this, objRequest);
-      const streamingHttpTokenReader = new StreamingHttpTokenReader(s3Request, {
+      const rangeRequestTokenizer = new RangeRequestTokenizer(s3Request, {
         avoidHeadRequests: true
       });
-      await streamingHttpTokenReader.init();
-      return parseFromTokenizer(streamingHttpTokenReader, streamingHttpTokenReader.contentType, options);
+      await rangeRequestTokenizer.init();
+      return parseFromTokenizer(rangeRequestTokenizer, rangeRequestTokenizer.contentType, options);
     }
   }
 }
