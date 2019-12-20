@@ -862,7 +862,7 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-music-metadata@^5.0.0:
+music-metadata@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-5.3.1.tgz#c375e2c0be89f86945a110e6a2e6383fd146724d"
   integrity sha512-fXVLqvGFsfcX7HqHpQjS++Gad/WagEbwzuK5C8lkToTyhW27WLO46Ily84Ym/PlfIU9H/NK/S0NCNLoVQCSS1w==
