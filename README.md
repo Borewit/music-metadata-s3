@@ -76,3 +76,7 @@ const S3 = require('aws-sdk/clients/s3');
 | `disableChunked` | `boolean` | set to `true` to switch to conventional sequential streaming. |
 
 Other options are inherited from [music-metadata](https://github.com/Borewit/music-metadata#options)
+
+## Dependency graph
+
+![dependency graph](https://i.imgur.com/j9JFnfZ.png)
