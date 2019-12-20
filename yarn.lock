@@ -864,9 +864,9 @@ ms@^2.1.1:
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 music-metadata@^5.0.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-5.2.0.tgz#ebeb97a0d86c79ef43f75e517e5bf35f9498157c"
-  integrity sha512-0ya4ct9T7RqTCa2aFacTs9N7pUXq6/1vG1Nnr8P36u6UQO1nRpD7O0InK3IcASiwSrGaCw1PnYrQek33T+/C9w==
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-5.3.0.tgz#c76f7b65048060cea6aad7d01141e55ddf8fd0ce"
+  integrity sha512-lcw591RRa+HNCIOfos+TpBaJ3GS5J+OJSmXCB6FuDDtAOhY5Ys99KFBwtBoQsYs9shpBVZoJsCR8OJehhshPOg==
   dependencies:
     content-type "^1.0.4"
     debug "^4.1.0"
