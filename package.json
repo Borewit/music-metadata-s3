@@ -42,7 +42,7 @@
     "url": "https://github.com/Borewit/music-metadata-s3/issues"
   },
   "dependencies": {
-    "@tokenizer/range": "^0.1.0",
+    "@tokenizer/range": "^0.2.1",
     "music-metadata": "^5.4.3"
   },
   "devDependencies": {

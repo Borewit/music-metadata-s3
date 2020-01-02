@@ -39,13 +39,13 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@tokenizer/range@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@tokenizer/range/-/range-0.1.1.tgz#a174031cbdb8eebf3dc0e0a8eee41217e42d8609"
-  integrity sha512-GpRSPWZt/AtCjwE1N4m+wFI0r1L7VhLpXiRXaohL3D5QSkUXbl0Im0BzEaxhz7UPg5eT/BxlUwUHMGacwQrTeA==
+"@tokenizer/range@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tokenizer/range/-/range-0.2.1.tgz#f50605c2b42936f296d8fd32569fee5c79ee6bbf"
+  integrity sha512-guIiNyR/VXFtYbpMbfQj8zVdbwu5MoRjh2YE/NwFeJJwkBOPBw5FhoHmJ7IAv4btHlFeBGtRDiLuuZtYkr12AA==
   dependencies:
     debug "^4.1.1"
-    strtok3 "^3.1.4"
+    strtok3 "^5.0.0"
 
 "@tokenizer/token@^0.1.0":
   version "0.1.0"
@@ -1224,18 +1224,19 @@ strip-json-comments@2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-strtok3@^3.1.4:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-3.1.7.tgz#e236e955e7c93c156442a06f7b385a90a7f528d4"
-  integrity sha512-N0qFNf5vkyXgaPr4AHRmCTqdFwTnB1LxX3xo1N5KHMLhqircDdL9m8qem3Lpb8IIuJaNL1Jddazvb9WRwUdSlw==
-  dependencies:
-    debug "^4.1.1"
-    then-read-stream "^2.0.8"
-
 strtok3@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-4.1.1.tgz#75043bb6175ebb22f10d48dfe9b06560345dc647"
   integrity sha512-7nfDPVwCrx35LVYqEZPfrNJuoqlgOcsW2PIcru4/IbYXjtI17WtdZLtRJtpwR1Mj/alJ01FY57NsX4Gwl/ntTg==
+  dependencies:
+    "@tokenizer/token" "^0.1.0"
+    debug "^4.1.1"
+    then-read-stream "^3.0.0"
+
+strtok3@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-5.0.0.tgz#cf48cdede0b7641eb97e62918abce18441cff688"
+  integrity sha512-HpdgEUSkMqlTjO7uWEBvWHEKBYqXCbVeihlE+sa0keGsfVXspVxye1dPa4OYvnzOJsErzn6ohQU1U/ozcVAPKQ==
   dependencies:
     "@tokenizer/token" "^0.1.0"
     debug "^4.1.1"
@@ -1254,11 +1255,6 @@ supports-color@^5.3.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
-
-then-read-stream@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-2.0.8.tgz#1d2c29e46af1327101875abef183e43313876c1b"
-  integrity sha512-OIQn3/zF2J/gp6mAQTbBb1AR+3yoSRqjaij0gGnEUcTl93T840mWIZ9sJWwubjwP7VUDwJpT+Tdl7T9RrQmMlw==
 
 then-read-stream@^3.0.0:
   version "3.0.0"
