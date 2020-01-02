@@ -10,7 +10,8 @@
 Extension for [music-metadata](https://github.com/Borewit/music-metadata) to retrieve metadata from files stored on [Amazon Web Services (AWS) S3 cloud storage](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html).
 
 The magic of this module is, it is able to extract the metadata from your audio files, without downloading and parsing the entire file.
-Using [@tokenizer/range](https://github.com/Borewit/tokenizer-range), it partial downloads the files, just accessing the chunks holding the metadata.
+
+This module is integrating [@tokenizer/s3](https://github.com/Borewit/tokenizer-s3), for reading from the S3 cloud, and using [music-metadata](https://github.com/Borewit/music-metadata) to parse the audio file.
 
 ## Installation
 ```shell script
@@ -21,17 +22,16 @@ npm install @music-metadata/s3
 
 Read metadata from 'My audio files/01 - My audio track.flac' stored in the S3 cloud:
 ```js
-const { MMS3Client } = require('@music-metadata/s3');
+const { parseS3Object } = require('@music-metadata/s3');
 const S3 = require('aws-sdk/clients/s3');
 
 (async () => {
 
   const s3 = new S3();
-  const mmS3client = new MMS3Client(s3); // Pass S3 client to music-metadata-S3-client
 
   console.log('Parsing...');
   try {
-    const data = await mmS3client.parseS3Object({
+    const data = await parseS3Object(s3, {
         Bucket: 'your-bucket',
         Key: 'My audio files/01 - My audio track.flac'
       }
@@ -45,17 +45,16 @@ const S3 = require('aws-sdk/clients/s3');
 
 Using conventional streaming using the `disableChunked` flag:
 ```js
-const { MMS3Client } = require('@music-metadata/s3');
+const { parseS3Object } = require('@music-metadata/s3');
 const S3 = require('aws-sdk/clients/s3');
 
 (async () => {
 
   const s3 = new S3();
-  const mmS3client = new MMS3Client(s3); // Pass S3 client to music-metadata-S3-client
-
+  
   console.log('Parsing...');
   try {
-    const data = await mmS3client.parseS3Object({
+    const data = await parseS3Object(s3, {
         Bucket: 'your-bucket',
         Key: 'My audio files/01 - My audio track.flac'
       }, {

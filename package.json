@@ -42,8 +42,8 @@
     "url": "https://github.com/Borewit/music-metadata-s3/issues"
   },
   "dependencies": {
-    "@tokenizer/range": "^0.1.0",
-    "music-metadata": "^5.4.3"
+    "@tokenizer/s3": "^0.1.1",
+    "music-metadata": "^6.0.1"
   },
   "devDependencies": {
     "aws-sdk": "^2.596.0",
