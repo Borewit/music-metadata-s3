@@ -1,6 +1,6 @@
 {
   "name": "@music-metadata/s3",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Extension for music-metadata to read metadata from audio files on Amazon S3 storage",
   "main": "lib/index.js",
   "typings": "lib/index",
