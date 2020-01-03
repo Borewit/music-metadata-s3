@@ -78,4 +78,4 @@ Other options are inherited from [music-metadata](https://github.com/Borewit/mus
 
 ## Dependency graph
 
-![dependency graph](https://i.imgur.com/j9JFnfZ.png)
+![dependency graph](https://i.imgur.com/xv36cBD.png)
