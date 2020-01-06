@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@tokenizer/s3": "^0.1.1",
-    "music-metadata": "^6.0.1"
+    "music-metadata": "^6.1.0"
   },
   "devDependencies": {
     "aws-sdk": "^2.597.0",
