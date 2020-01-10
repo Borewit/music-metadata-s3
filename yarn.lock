@@ -476,10 +476,15 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.0"
 
-file-type@^12.4.2:
-  version "12.4.2"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-12.4.2.tgz#a344ea5664a1d01447ee7fb1b635f72feb6169d9"
-  integrity sha512-UssQP5ZgIOKelfsaB5CuGAL+Y+q7EmONuiwF3N5HAH0t27rvrttgi6Ra9k/+DVaY9UF6+ybxu5pOXLUdA8N7Vg==
+file-type@^13.0.3:
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-13.0.3.tgz#38ec631acda18103da09d4f1750836932e6711c4"
+  integrity sha512-fe3+9mnMLbpP8nRQm/cJgehypv375SOFOXFdLYyYe7hWxdWgS5hkDpWnld5At/vvfVEN6rVqKA3EOKMP03tJGg==
+  dependencies:
+    readable-web-to-node-stream "^2.0.0"
+    strtok3 "^5.0.1"
+    token-types "^2.0.0"
+    typedarray-to-buffer "^3.1.5"
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -727,6 +732,11 @@ is-symbol@^1.0.2:
   dependencies:
     has-symbols "^1.0.0"
 
+is-typedarray@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
+  integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
+
 isarray@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -916,16 +926,16 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-music-metadata@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-6.1.0.tgz#c6a0e399ace57f31f1f6634ca5fc4b27a73d4f01"
-  integrity sha512-dgt65LRyNbSlJ6fpa7HoQpdJHCWitLF0m96gifDINnRRi6KDvChHp6fYvujLOkSY2aMY/HLQqEWtX6M7hszSmA==
+music-metadata@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-6.1.1.tgz#1794cef6517efc48f7eddb446105ac2ba4d4648d"
+  integrity sha512-TXk6b8opdfxxP+MiZYnZ2PEZR+r4MMZio7WtiefpgUJGZe/CEXSX24nlW9q0dJr7lruNlqpHYfF8WlljoYyrcA==
   dependencies:
     content-type "^1.0.4"
     debug "^4.1.0"
-    file-type "^12.4.2"
+    file-type "^13.0.3"
     media-typer "^1.1.0"
-    strtok3 "^5.0.0"
+    strtok3 "^5.0.1"
     token-types "^2.0.0"
 
 node-environment-flags@1.0.6:
@@ -1071,6 +1081,11 @@ pathval@^1.1.0:
   resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
   integrity sha1-uULm1L3mUwBe9rcTYd74cn0GReA=
 
+peek-readable@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-3.1.0.tgz#250b08b7de09db8573d7fd8ea475215bbff14348"
+  integrity sha512-KGuODSTV6hcgdZvDrIDBUkN0utcAVj1LL7FfGbM0viKTtCHmtZcuEJ+lGqsp0fTFkGqesdtemV2yUSMeyy3ddA==
+
 picomatch@^2.0.4:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.1.tgz#21bac888b6ed8601f831ce7816e335bc779f0a4a"
@@ -1117,6 +1132,11 @@ read-pkg@^3.0.0:
     load-json-file "^4.0.0"
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
+
+readable-web-to-node-stream@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/readable-web-to-node-stream/-/readable-web-to-node-stream-2.0.0.tgz#751e632f466552ac0d5c440cc01470352f93c4b7"
+  integrity sha512-+oZJurc4hXpaaqsN68GoZGQAQIA3qr09Or4fqEsargABnbe5Aau8hFn6ISVleT3cpY/0n/8drn7huyyEvTbghA==
 
 readdirp@~3.2.0:
   version "3.2.0"
@@ -1290,14 +1310,14 @@ strip-json-comments@2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-strtok3@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-5.0.0.tgz#cf48cdede0b7641eb97e62918abce18441cff688"
-  integrity sha512-HpdgEUSkMqlTjO7uWEBvWHEKBYqXCbVeihlE+sa0keGsfVXspVxye1dPa4OYvnzOJsErzn6ohQU1U/ozcVAPKQ==
+strtok3@^5.0.0, strtok3@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-5.0.1.tgz#f89e09fa024dff82e39c160faf8d8706c24e7d21"
+  integrity sha512-AWliiIjyb87onqO8pM+1Hozm+PPcR4YYIWbFUT5OKQ+tOMwgdT8HwJd/IS8v3/gKdAtE5aE2p3FhcWqryuZPLQ==
   dependencies:
     "@tokenizer/token" "^0.1.0"
     debug "^4.1.1"
-    then-read-stream "^3.0.0"
+    peek-readable "^3.1.0"
 
 supports-color@6.0.0:
   version "6.0.0"
@@ -1312,11 +1332,6 @@ supports-color@^5.3.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
-
-then-read-stream@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/then-read-stream/-/then-read-stream-3.0.0.tgz#4a4ec37e23f18135b56fbc61670b6e8195e545b2"
-  integrity sha512-4rrXPPD+MRft1kzKj8qe9Lo0qoz+uEkwn6QxWSM4iXux3p7MP72Oq/QJ849/yhmHweOJJI8jJsMjKvAjI33+2A==
 
 to-regex-range@^5.0.1:
   version "5.0.1"
@@ -1373,6 +1388,13 @@ type-detect@^4.0.0, type-detect@^4.0.5:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
+
+typedarray-to-buffer@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
+  integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
+  dependencies:
+    is-typedarray "^1.0.0"
 
 typescript@^3.7.4:
   version "3.7.4"
