@@ -49,7 +49,7 @@
     "music-metadata": "^6.3.3"
   },
   "devDependencies": {
-    "aws-sdk": "^2.613.0",
+    "aws-sdk": "^2.614.0",
     "chai": "^4.2.0",
     "del-cli": "^3.0.0",
     "mocha": "^7.0.1",
