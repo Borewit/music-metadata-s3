@@ -13,6 +13,10 @@ The magic of this module is, it is able to extract the metadata from your audio 
 
 This module is integrating [@tokenizer/s3](https://github.com/Borewit/tokenizer-s3), for reading from the S3 cloud, and using [music-metadata](https://github.com/Borewit/music-metadata) to parse the audio file.
 
+## Deprecated
+This module is deprecated. It has become obsolete with [@tokenizer/s3](https://github.com/Borewit/tokenizer-s3).
+You may want to use [this example](https://github.com/Borewit/tokenizer-s3#reading-audio-metadata-from-amazon-s3) as starting point.
+
 ## Installation
 ```shell script
 npm install @music-metadata/s3
